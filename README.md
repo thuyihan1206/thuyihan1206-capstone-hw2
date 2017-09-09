@@ -13,4 +13,4 @@ Clicking a thing will display a marker on the map that represents the location o
 
 Clicking the marker will further display an image and information for that thing.
 
-Note: the `geolocation` and `geocoder` features presented in the lectures still work in the **Types** page, although the origin location will not show in the map per assignment requirements.
+Note: the `geolocation` and `geocoder` features presented in the lectures still work in the **Types** page, although the origin location will not show on the map per assignment requirements.
