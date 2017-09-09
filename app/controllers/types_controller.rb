@@ -4,8 +4,8 @@ class TypesController < ApplicationController
   end
 
   def show
-    @type = Type.find(params[:id])
-    @things = @type.things
+    type = Type.find(params[:id])
+    @things = type.things
   end
 
 end

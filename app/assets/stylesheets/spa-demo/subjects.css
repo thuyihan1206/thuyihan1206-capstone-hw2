@@ -67,7 +67,9 @@ div.image-marker-info img {
   width: 200px;
 }
 
-
+.types li {
+    height: 30px;
+}
 
 
 

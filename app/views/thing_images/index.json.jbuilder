@@ -13,4 +13,7 @@ json.array!(@thing_images) do |ti|
   if ti.respond_to?(:distance) && ti.distance && ti.distance >= 0
     json.distance ti.distance.to_f
   end
+  if ti.respond_to?(:description) && ti.description
+    json.thing_description ti.description
+  end
 end

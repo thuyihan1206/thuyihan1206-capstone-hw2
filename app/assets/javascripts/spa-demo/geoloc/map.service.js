@@ -77,6 +77,7 @@
       //display the marker
       var marker = new google.maps.Marker(markerOptions);
       marker.setMap(this.map);
+      this.map.setCenter(marker.getPosition()); // setCenter takes a LatLng object
 
       //add an info pop-up
       var service=this;
@@ -94,13 +95,15 @@
       this.markers.push(markerOptions);
 
       //size the map to fit all markers
-      var bounds = new google.maps.LatLngBounds();
-      angular.forEach(this.markers, function(marker){
-        bounds.extend(marker.position);
-      });
+      if (!markerOptions.not_bound) {
+          var bounds = new google.maps.LatLngBounds();
+          angular.forEach(this.markers, function (marker) {
+              bounds.extend(marker.position);
+          });
 
-      //console.log("bounds", bounds);
-      this.map.fitBounds(bounds);        
+          //console.log("bounds", bounds);
+          this.map.fitBounds(bounds);
+      }
 
       return markerOptions;
     }

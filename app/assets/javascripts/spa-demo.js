@@ -68,3 +68,10 @@
 //= require spa-demo/subjects/current_subjects/current_subjects.component
 //= require spa-demo/subjects/current_images/current_images.component
 //= require spa-demo/subjects/current_things/current_things.component
+
+//= require spa-demo/types/types.module
+//= require spa-demo/types/current_types/current_types.component
+//= require spa-demo/types/current_type_things/current_type_things.component
+//= require spa-demo/types/current_type_subjects/current_type_subjects.service
+//= require spa-demo/types/current_type_subjects/current_type_subjects.component
+

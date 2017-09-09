@@ -24,6 +24,10 @@ class ThingImage < ActiveRecord::Base
     return scope
   }
 
+  def description
+    thing.description if thing
+  end
+
   def self.with_distance(origin, scope)
     scope.select("-1.0 as distance").with_position
          .each {|ti| ti.distance = ti.distance_from(origin) }
